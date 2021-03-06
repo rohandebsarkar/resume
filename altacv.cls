@@ -279,9 +279,10 @@
     \begin{minipage}{\dimexpr\linewidth-\altacv@photos@width}%
     \raggedright%
     {\namefont\color{name}\MakeUppercase{\@name}\par}
-    \medskip
+    \bigskip
     {\taglinefont\color{tagline}\@tagline\par}
-    \medskip
+    \bigskip
+    \bigskip
     {\personalinfofont\@personalinfo\par}
     \end{minipage}\hfill%
     \altacv@right@photos\par%
@@ -308,7 +309,7 @@
 % Fork: structure modified to include change title, company name, start/end dates and work location (only a string)
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1}
-  \ifstrequal{#2}{}{}{\large{\color{accent}#2}}
+  \ifstrequal{#2}{}{}{\large{\color{accent}| #2}}
   \par\medskip\normalsize
   \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\color{emphasis}~#3}}}
   \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faMapMarker\color{emphasis}~#4}}}\par
@@ -398,11 +399,28 @@
 }
 
 % Fork: CV reference tag has been modified to accept only linkedin accounts instead mail. It can be modified easily in case you need to display other type of contact
-\newcommand{\cvref}[2]{%
+% \newcommand{\cvref}[2]{%
+%   \textcolor{emphasis}{\textbf{#1}}\par
+%   \begin{description}[font=\color{accent},style=multiline,leftmargin=1.35em,align=left]
+%     \item[\small\normalfont\faLinkedin]\href{https://linkedin.com/in/#2}{#2}
+%   \end{description}
+% }
+
+\newcommand{\cvref}[5]{%
+  % \smallskip
   \textcolor{emphasis}{\textbf{#1}}\par
   \begin{description}[font=\color{accent},style=multiline,leftmargin=1.35em,align=left]
-    \item[\small\normalfont\faLinkedin]\href{https://linkedin.com/in/#2}{#2}
+    \smallskip
+    \item[\small\normalfont\emailsymbol] \href{mailto:#2}{#2}
+    \ifstrequal{#3}{}{}{\item[\small\normalfont\faGlobe] \href{#3}{#3}}
+    \ifstrequal{#4}{}{}{\item[\small\normalfont\mailaddresssymbol] #4}
+    \ifstrequal{#5}{}{}{\item[\small\normalfont\faLinkedin] \href{https://linkedin.com/in/#5}{#5}}
   \end{description}
+  % \medskip
+}
+
+\newcommand{\cvcourse}[2]{
+    \textcolor{accent}{#1 | \href{#2}{\faCertificate Certificate}}
 }
 
 \newcommand{\cvrepo}[2]{

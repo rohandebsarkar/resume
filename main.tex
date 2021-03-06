@@ -53,10 +53,10 @@
 
 % ----- LIGHT MODE -----
 \definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
+\definecolor{LightGrey}{HTML}{333333}
 \definecolor{PrimaryColor}{HTML}{001F5A}
 \definecolor{SecondaryColor}{HTML}{0039AC}
-\definecolor{ThirdColor}{HTML}{F3890B}
+\definecolor{ThirdColor}{HTML}{3F7FFF}
 \definecolor{BackgroundColor}{HTML}{E2E2E2}
 \colorlet{name}{PrimaryColor}
 \colorlet{tagline}{PrimaryColor}
@@ -93,24 +93,27 @@
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
-%% sample.bib contains your publications
-%% \addbibresource{sample.bib}
+%% publications.bib contains your publications
+% \addbibresource{publications.bib}
 
 \begin{document}
-    \name{John Doe}
-    \tagline{Test Developer}
+    \name{Rohan Deb Sarkar}
+    \tagline{Student of Computer Science and Physics}
     %% You can add multiple photos on the left or right
-    \photoL{4cm}{john-doe}
+    \photoL{4.5cm}{rohandebsarkar.png}
     
     \personalinfo{
-        \email{john_doe@email.com}\smallskip
-        \phone{+01-2345-678901}
-        \location{City, Country}\\
-        \linkedin{johnDoe}
-        \github{johnDoe}
-        \dev{johnDoe}
-        %\homepage{nicolasomar.me}
-        %\medium{nicolasomar}
+        \email{rohandeb.sarkar@outlook.com}
+        \phone{+91 99033 92210}
+        \location{Kolkata, India}
+        
+        \divider
+        
+        \linkedin{rohandebsarkar}
+        \github{rohandebsarkar}
+        % \twitter{RohanDebSarkar}
+        \homepage{rohandebsarkar.github.io}
+        % \medium{rohandebsarkar}
         %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
         % \orcid{0000-0000-0000-0000}
         %% You can add your own arbtrary detail with
@@ -127,81 +130,77 @@
     % \AtBeginEnvironment{itemize}{\small}
     
     %% Set the left/right column width ratio to 6:4.
-    \columnratio{0.25}
+    \columnratio{0.28}
 
     % Start a 2-column paracol. Both the left and right columns will automatically
     % break across pages if things get too long.
     \begin{paracol}{2}
-        % ----- STRENGTHS -----
-        \cvsection{Strengths}
-            \cvtag{One}
-            \cvtag{Two}
-            \cvtag{Three}
-            \cvtag{Four}
-            \cvtag{Five}
-            \cvtag{Six}
-            \cvtag{Seven}
-            \cvtag{Eight}
-            \cvtag{Nine}
-            \cvtag{Ten}
-            \medskip
-            
-            \cvtag{Red}
-            \cvtag{Yellow}
-            \cvtag{Blue}
-            \cvtag{Green}
-            \cvtag{Violet}
-            \cvtag{Orange}
-        % ----- STRENGTHS -----
+        % ----- INTERESTS -----
+        \cvsection{Interests}
+            \begin{itemize}
+            	\item \cvtag{Computer Science}
+            	
+            	\item \cvtag{Physics}
+            	
+            	\item \cvtag{Mathematics}
+            \end{itemize}
+        % ----- INTERESTS -----
         
         % ----- LEARNING -----
-        \cvsection{Learning}
-            \cvtag{Uno}
-            \cvtag{Dos}
-            \cvtag{Tres}
-            \cvtag{Cuatro}
-            \cvtag{Cinco}
-            \cvtag{Seis}
-            \cvtag{Siete}
-            \cvtag{Ocho}
-            \cvtag{Nueve}
-            \cvtag{Diez}
-            \medskip
+        % \cvsection{Learning}
+        %     \cvtag{Uno}
+        %     \cvtag{Dos}
+        %     \cvtag{Tres}
+        %     \cvtag{Cuatro}
+        %     \cvtag{Cinco}
+        %     \cvtag{Seis}
+        %     \cvtag{Siete}
+        %     \cvtag{Ocho}
+        %     \cvtag{Nueve}
+        %     \cvtag{Diez}
+        %     \medskip
             
-            \cvtag{Rojo}
-            \cvtag{Amarillo}
-            \cvtag{Azul}
-            \cvtag{Verde}
-            \cvtag{Violeta}
-            \cvtag{Naranja}
-            \cvtag{Marron}
-            \cvtag{Blanco}
-            \cvtag{Gris}
-            \cvtag{Negro}
+        %     \cvtag{Rojo}
+        %     \cvtag{Amarillo}
+        %     \cvtag{Azul}
+        %     \cvtag{Verde}
+        %     \cvtag{Violeta}
+        %     \cvtag{Naranja}
+        %     \cvtag{Marron}
+        %     \cvtag{Blanco}
+        %     \cvtag{Gris}
+        %     \cvtag{Negro}
         % ----- LEARNING -----
+
+        % ----- HOBBIES -----
+        \cvsection{Hobbies}
+            \begin{itemize}
+                \item Coding and learning new \\programming languages.
+                \smallskip
+                \item Doing research based \\projects on various topics.
+                \smallskip
+                \item Understanding the science \\of everything around me.
+            \end{itemize}
+        % ----- HOBBIES -----
         
         % ----- LANGUAGES -----
         \cvsection{Languages}
-            \cvlang{Lang 1}{Native}\\
-            \divider
-            
-            \cvlang{Lang 2}{Basic / A2}
+            \begin{itemize}
+                \item \cvlang{Bengali}{Native}
+                \smallskip
+                \item \cvlang{English}{Proficient}
+            \end{itemize}
             %% Yeah I didn't spend too much time making all the
             %% spacing consistent... sorry. Use \smallskip, \medskip,
             %% \bigskip, \vpsace etc to make ajustments.
-            \smallskip
         % ----- LANGUAGES -----
             
         % ----- REFERENCES -----
         \cvsection{References}
-            \cvref{Ref 1}{ref-1}
+            \cvref{Mrs Rangona Roy Barman}{ipskol@gmail.com}{www.ipskol.com}{Principal, \\ \hspace{2.5pt} International Public School, \\ \hspace{2.5pt} Kolkata - 700 133.}{}
             \divider
             
-            \cvref{Ref 2}{ref-2}
-            \divider
-            
-            \cvref{Ref 3}{ref-3}
-            \smallskip
+            \cvref{Ms Semanti Chackraborty}{ipskol@gmail.com}{www.ipskol.com}{Physics Teacher, \\ \hspace{2.5pt} International Public School, \\ \hspace{2.5pt} Kolkata - 700 133.}{}
         % ----- REFERENCES -----
         
         % ----- MOST PROUD -----
@@ -238,56 +237,97 @@
         % ----- ABOUT ME -----
         \cvsection{About Me}
             \begin{quote}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                I am devoted to science and eager to make use of it for building this world a better place for everyone.
+                My interests include Computer Science, \\Physics, and a bit of Mathematics.
+                I am trying to learn things that are \\unknown to me. 
             \end{quote}
         % ----- ABOUT ME -----
         
         % ----- EXPERIENCE -----
-        \cvsection{Experience}
-            \cvevent{Charge }{| Company}{Mm YYYY -- Mm YYYY}{City, Country}
-            \begin{itemize}
-                \item First item
-                \item Second item
-                \item Third item
-            \end{itemize}
-            \divider
+        %\cvsection{Experience}
+            % \cvevent{Charge }{| Company}{Mm YYYY -- Mm YYYY}{City, Country}
+            % \begin{itemize}
+            %     \item First item
+            %     \item Second item
+            %     \item Third item
+            % \end{itemize}
+            % \divider
             
-            \cvevent{Charge }{| Company}{Mm YYYY -- Mm YYYY}{City, Country}
-            \begin{itemize}
-                \item First item
-                \item Second item
-                \item Third item
-            \end{itemize}
+            % \cvevent{Charge }{| Company}{Mm YYYY -- Mm YYYY}{City, Country}
+            % \begin{itemize}
+            %     \item First item
+            %     \item Second item
+            %     \item Third item
+            % \end{itemize}
         % ----- EXPERIENCE -----
         
         % ----- EDUCATION -----
         \cvsection{Education}
-            \cvevent{Title }{| Institution}{Mm YYYY -- Mm YYYY}{City, Country}
-            \begin{itemize}
-                \item GPA: 1,23
-            \end{itemize}
+            \cvevent{Senior Secondary (XII Standard)}{International Public School}{April 2019 -- June 2021}{Kolkata, India}
+                \begin{itemize}
+                    \item Indian School Certificate (ISC) Examination, 2021.
+                \end{itemize}
             \divider
             
-            \cvevent{Title }{| Institution}{Mm YYYY -- Mm YYYY}{City, Country}
-            \begin{itemize}
-                \item GPA: 1,23
-            \end{itemize}
+            \cvevent{Secondary (X Standard)}{International Public School}{March 2019}{Kolkata, India}
+                \begin{itemize}
+                    \item 91.0\% in Indian Certificate of Secondary Education (ICSE) Examination, 2019.
+                \end{itemize}
         % ----- EDUCATION -----
         
-        % ----- PROJECTS -----
-        \cvsection{Projects}
-            \cvevent{Project 1 }{\cvrepo{| \faGithub}{https://github.com/user/repo}\cvrepo{| \faGlobe}{https://repo-demo.com/}}{Mm YYYY -- Mm YYYY}{}
-            \begin{itemize}
-                \item Item 1
-                \item Item 2
-            \end{itemize}
+        % ----- ACADEMIC AWARDS -----
+        \cvsection{Academic Awards}
+            \cvevent{Appreciation Letter}{Minister of Science \& Technology, Govt. of India}{January 2020}{}
+                \begin{itemize}
+                    \item For participation as a student in the Guinness World Record for the ``Largest \\astrophysics lesson'' on applications of spectroscopy in astrophysics on \\November 5, 2019.
+                \end{itemize}
             \divider
-            
-            \cvevent{Project 1 }{\cvrepo{| \faGitlab}{https://gitlab.com/user/repo}\cvrepo{| \faGlobe}{https://repo-demo.com/}}{Mm YYYY -- Mm YYYY}{}
-            \begin{itemize}
-                \item Item 1
-                \item Item 2
-            \end{itemize}
+
+            \cvevent{Letter of Scholarship}{International Public School}{September 2019}{}
+                \begin{itemize}
+                    \item For excellent performance in academics for the session 2018-2019 (X Standard).
+                \end{itemize}
+        % ----- ACADEMIC AWARDS -----
+
+        % ----- CERTIFICATE COURSES -----
+        % \cvsection{Certificate Courses}
+        %     \cvevent{Course 1 }{\cvcourse{Instituition}{https://edx.org/certificate}}{Mm YYYY}{}
+        %         \begin{itemize}
+        %             \item Item 1
+        %             \item Item 2
+        %         \end{itemize}
+        %         \divider
+
+        %         \cvevent{Course 2 }{\cvcourse{Instituition}{https://edx.org/certificate}}{Mm YYYY}{}
+        %         \begin{itemize}
+        %             \item Item 1
+        %             \item Item 2
+        %         \end{itemize}
+        % ----- CERTIFICATE COURSES -----
+        
         % ----- PROJECTS -----
+        % \cvsection{Projects}
+        %     \cvevent{Project 1 }{\cvrepo{| \faGithub}{https://github.com/user/repo}\cvrepo{| \faGlobe}{https://repo-demo.com/}}{Mm YYYY -- Mm YYYY}{}
+        %     \begin{itemize}
+        %         \item Item 1
+        %         \item Item 2
+        %     \end{itemize}
+        %     \divider
+            
+        %     \cvevent{Project 1 }{\cvrepo{| \faGitlab}{https://gitlab.com/user/repo}\cvrepo{| \faGlobe}{https://repo-demo.com/}}{Mm YYYY -- Mm YYYY}{}
+        %     \begin{itemize}
+        %         \item Item 1
+        %         \item Item 2
+        %     \end{itemize}
+        % ----- PROJECTS -----
+
+        % ----- PUBLICATIONS -----
+        % \cvsection{Publications}
+        %     \nocite{*}
+        %     \printbibliography[heading=pubtype,title={Books \faBook \medskip},type=book]
+        %     \divider
+            
+        %     \printbibliography[heading=pubtype,title={Journal Articles {\faIcon[regular]{file-alt}} \medskip},type=article]
+        % ----- PUBLICATIONS -----
     \end{paracol}
 \end{document}
