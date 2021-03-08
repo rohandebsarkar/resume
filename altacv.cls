@@ -237,7 +237,7 @@
       \includegraphics[width=\linewidth]{#2}
     \else
 % Fork: The photo image has modified to include a border around it, which color is aligned to document's theme
-      \tikz\filldraw[color=headingrule, fill overzoom image={#2}, ultra thick](-1,0) circle[radius=0.5\linewidth];
+      \tikz\filldraw[color=headingrule, fill overzoom image={#2}, ultra thick](-1,0) circle[radius=0.495\linewidth];
     \fi%
   \end{minipage}%
 }
@@ -276,7 +276,7 @@
 \newcommand{\makecvheader}{%
   \begingroup
     \altacv@left@photos\hfill%
-    \begin{minipage}{\dimexpr\linewidth-\altacv@photos@width}%
+    \begin{minipage}{\dimexpr\linewidth-\altacv@photos@width-1.2cm}%
     \raggedright%
     {\namefont\color{name}\MakeUppercase{\@name}\par}
     \bigskip
@@ -311,8 +311,8 @@
   {\large\color{emphasis}#1}
   \ifstrequal{#2}{}{}{\large{\color{accent}| #2}}
   \par\medskip\normalsize
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\color{emphasis}~#3}}}
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faMapMarker\color{emphasis}~#4}}}\par
+  \ifstrequal{#3}{}{}{{\small\makebox[0.495\linewidth][l]{\color{accent}\faCalendar\color{emphasis}~#3}}}
+  \ifstrequal{#4}{}{}{{\small\makebox[0.495\linewidth][l]{\color{accent}\faMapMarker\color{emphasis}~#4}}}\par
   \medskip\normalsize
 }
 
