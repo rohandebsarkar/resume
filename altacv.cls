@@ -307,12 +307,12 @@
 
 % v1.1.4: fixes inconsistent font size
 % Fork: structure modified to include change title, company name, start/end dates and work location (only a string)
-\newcommand{\cvevent}[4]{%
+\newcommand{\cvevent}[5]{%
   {\large\color{emphasis}#1}
-  \ifstrequal{#2}{}{}{\large{\color{accent}| #2}}
+  \ifstrequal{#3}{}{}{{\large\faGripLinesVertical\color{accent}#2\color{accent}~#3}}
   \par\medskip\normalsize
-  \ifstrequal{#3}{}{}{{\small\makebox[0.495\linewidth][l]{\color{accent}\faCalendar\color{emphasis}~#3}}}
-  \ifstrequal{#4}{}{}{{\small\makebox[0.495\linewidth][l]{\color{accent}\faMapMarker\color{emphasis}~#4}}}\par
+  \ifstrequal{#4}{}{}{{\small\makebox[0.495\linewidth][l]{\color{accent}\faCalendar\color{emphasis}~#4}}}
+  \ifstrequal{#5}{}{}{{\small\makebox[0.495\linewidth][l]{\color{accent}\faMapMarker\color{emphasis}~#5}}}\par
   \medskip\normalsize
 }
 
@@ -420,11 +420,11 @@
 }
 
 \newcommand{\cvcourse}[2]{
-    \textcolor{accent}{#1 | \href{#2}{\faCertificate Certificate}}
+  #1\color{emphasis}\faGripLinesVertical\color{accent}\href{#2}{\faCertificate Certificate}
 }
 
 \newcommand{\cvrepo}[2]{
-    \textcolor{accent}{\href{#2}{#1}}
+  \color{accent}\href{#2}{#1}\color{emphasis}
 }
 
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}
