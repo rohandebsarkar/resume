@@ -1,0 +1,46 @@
+name: latex_build
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push request events but only for the resume branch
+  push:
+    branches: [ resume ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+         ref: gh-pages
+         
+      - uses: actions/checkout@v2
+
+      - name: git config
+        run : |
+          git config --global user.name 'Rohan Deb Sarkar'
+          git config --global user.email 'rohandebsarkar@gmail.com'
+
+      - name: git switch gh-pages
+        run: git switch gh-pages
+      
+      - name: git checkout resume altacv.cls resume.tex publications.bib rohandebsarkar.png
+        run: git checkout resume altacv.cls resume.tex publications.bib rohandebsarkar.png
+
+      - name: Github Action for LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          # The root LaTeX file to be compiled
+          root_file: resume.tex
+
+      - name: git commit
+        run: git commit resume.pdf -m ${GITHUB_SHA::8}
+
+      - name: git push
+        run: git push
