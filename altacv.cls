@@ -412,7 +412,7 @@
   \begin{description}[font=\color{accent},style=multiline,leftmargin=1.35em,align=left]
     \smallskip
     \item[\small\normalfont\emailsymbol] \href{mailto:#2}{#2}
-    \ifstrequal{#3}{}{}{\item[\small\normalfont\faGlobe] \href{#3}{#3}}
+    \ifstrequal{#3}{}{}{\item[\small\normalfont\faGlobe] \href{http://#3}{#3}}
     \ifstrequal{#4}{}{}{\item[\small\normalfont\mailaddresssymbol] #4}
     \ifstrequal{#5}{}{}{\item[\small\normalfont\faLinkedin] \href{https://linkedin.com/in/#5}{#5}}
   \end{description}
